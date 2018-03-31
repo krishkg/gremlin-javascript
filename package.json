@@ -1,4 +1,6 @@
 {
+	"name": "gremlin-javascript",
+	"version": "1.0.0.0",
 	"devDependencies": {
 		"lerna": "^2.1.2"
 	},
