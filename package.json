@@ -1,5 +1,8 @@
 {
 	"devDependencies": {
 		"lerna": "^2.1.2"
+	},
+	"dependencies": {
+		"reconnectingwebsocket": "^1.0.0"
 	}
 }

@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events';
 
-import WebSocket from 'ws';
+import ReconnectingWebSocket from 'reconnectingwebsocket';
 
 export default class WebSocketGremlinConnection extends EventEmitter {
   constructor({ port, host, path, ssl, rejectUnauthorized }) {
@@ -13,7 +13,7 @@ export default class WebSocketGremlinConnection extends EventEmitter {
       rejectUnauthorized,
     };
 
-    this.ws = new WebSocket(address, null, options);
+    this.ws = new ReconnectingWebSocket(address, null, options);
 
     this.ws.onopen = () => this.onOpen();
     this.ws.onerror = err => this.handleError(err);
